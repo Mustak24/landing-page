@@ -82,10 +82,10 @@ export default function HeroSection() {
                 </div>
 
 
-                <div className="relative w-full max-w-[800px] translate-y-10" >
-                    <div className="absolute bg-orange-400 w-full h-full rotate-2 rounded-2xl" ></div>
+                <div className="relative w-full max-w-[800px] translate-y-10 group" >
+                    <div className="absolute bg-orange-400 w-full h-full rotate-2 rounded-2xl group-hover:-rotate-2 duration-500 transition-all" ></div>
 
-                    <div className="bg-white p-5 rounded-lg w-full -rotate-2 flex flex-col gap-4" >
+                    <div className="bg-white p-5 rounded-lg w-full -rotate-2 flex flex-col gap-4 group-hover:rotate-2 duration-500 transition-all group-hover:scale-105" >
                         <div className="bg-blue-500 text-white p-4 w-full rounded-lg">
                             <h1>Today Focus</h1>
                             <div className="flex items-center justify-between w-full" >
