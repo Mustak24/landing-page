@@ -111,8 +111,8 @@ export default function StarsBackground({gap={x: 10, y: 10}, mouseRadius=100,sta
         ctx.current = canvas.current.getContext('2d');
         init();     
 
-        canvas.current.addEventListener('mousemove', handleMouseMove);
-        return () => canvas.current?.removeEventListener('mousemove', handleMouseMove)
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove)
     }, [canvas])
     
     useEffect(() => {

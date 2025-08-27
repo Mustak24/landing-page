@@ -9,9 +9,9 @@ import SlidingTextOnHover from "../ui/Texts/SlidingTextOnHover";
 export default function Navbar({routes}){
     routes = [
         {name: 'Home', icon: <FiHome />, id: 'hero', url: '#hero'},
-        {name: 'Features', icon: <IoMdInformationCircleOutline />, id: 'fetures', url: '#features'},
+        {name: 'Features', icon: <IoMdInformationCircleOutline />, id: 'features', url: '#features'},
+        {name: 'Benefits', icon: <MdOutlineContacts />, id: 'benefits', url: '#benefits'},
         {name: 'Price', icon: <FaCode />, id: 'price', url: '#price'},
-        {name: 'Temp', icon: <MdOutlineContacts />, id: 'subscribe', url: '#subscribe'},
     ];
 
     const [navigationIndex, setNavigationIndex] = useState(0);
