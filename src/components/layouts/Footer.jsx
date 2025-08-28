@@ -10,7 +10,7 @@ export default function Footer() {
                             <div className="flex items-center justify-center size-14" >
                                 <img src="app-icon-100.png" alt="404" className="w-full h-full object-cover" />
                             </div>
-                            <span className="text-2xl font-bold">TaskFlow</span>
+                            <span className="text-2xl font-bold">Task Manager</span>
                         </div>
                         <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
                             TaskFlow helps teams and individuals organize their work, collaborate effectively,

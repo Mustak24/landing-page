@@ -1,6 +1,5 @@
 import { FaRegClock } from "react-icons/fa";
 import StarsBackground from "../background-views/StarsBackground";
-import NormalButton from "../ui/Buttons/NoramalButton";
 import RoundedButton from "../ui/Buttons/RoundedButton";
 import { TypingText } from "../ui/Texts/TypingText";
 import { useState } from "react";
@@ -26,12 +25,10 @@ export default function HeroSection() {
                     <SlidingTextOnVisible speed={100} className="text-gray-500"
                         text={'all in one place'}
                     />
-
-                    <ShowWhenVisible>
-                        <TypingText speed={25} className="text-xs mt-3 font-normal" >
-                            Efficently manage your task and boost you productivity
-                        </TypingText>
-                    </ShowWhenVisible>
+                      
+                    <TypingText speed={25} className="text-xs mt-3 font-normal" >
+                        Efficently manage your task and boost you productivity
+                    </TypingText>
 
                     <div
                         className="absolute top-0 right-0 translate-x-full bg-white rounded-md animate-bounce"
