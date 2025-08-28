@@ -3,7 +3,7 @@ import { FiCheck, FiStar } from "react-icons/fi";
 export default function PriceCard({name, popular, price, period, description, features, cta}) {
     return (
         <div 
-            className={`relative rounded-2xl p-8 transition-all duration-200 ${
+            className={`relative rounded-2xl p-8 transition-all duration-200 max-w-[360px] ${
             popular 
                 ? 'bg-[rgb(100,130,250)] text-white border-2 border-blue-200 shadow-xl hover:shadow-2xl scale-105' 
                 : 'bg-white border border-gray-200 shadow-lg hover:shadow-xl hover:border-gray-300'
@@ -28,7 +28,7 @@ export default function PriceCard({name, popular, price, period, description, fe
             </div>
 
             <button 
-                className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                className={`w-full py-4 sm:px-6 rounded-lg font-semibold transition-all duration-200 ${
                     popular
                     ? 'bg-white text-[rgb(100,140,250)] hover:bg-[rgb(100,140,250)] hover:text-white transform hover:scale-105 shadow-lg hover:shadow-xl'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200 hover:scale-105'

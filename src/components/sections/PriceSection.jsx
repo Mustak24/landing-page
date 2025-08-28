@@ -52,7 +52,7 @@ export default function PriceSection() {
   ];
 
   return (
-    <section id="price" className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">      
+    <section id="price" className="pt-30 relative overflow-hidden">      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -64,7 +64,7 @@ export default function PriceSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="flex justify-center flex-wrap gap-8 w-full">
             {
                 plans.map(plan => (
                     <PriceCard {...plan} key={plan.name} />

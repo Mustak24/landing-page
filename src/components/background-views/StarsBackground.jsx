@@ -9,7 +9,7 @@ class Stars {
         this.y = y;
         this.size = size;
         this.opacity = 0;
-        this.speed = Math.random() * 0.1;
+        this.speed = Math.random();
         this.color = '255,255,255';
     } 
 
@@ -53,7 +53,7 @@ class Stars {
     }
 }
 
-export default function StarsBackground({gap={x: 10, y: 10}, mouseRadius=100,stareSize=2, stareColor=[100,100,100], ...props}) {
+export default function StarsBackground({gap={x: 10, y: 10}, mouseRadius=100, stareSize=2, stareColor=[100,100,100], speed=0.1, ...props}) {
     const canvas = useRef(null)
     const ctx = useRef(null);
     const rows = useRef(0);
@@ -74,8 +74,11 @@ export default function StarsBackground({gap={x: 10, y: 10}, mouseRadius=100,sta
         stars.current = [];
         for(let y=0; y<rows.current; y++) {
             for(let x=0; x<cols.current; x++) {
-                stars.current.push(new Stars(gap.x * x, gap.y * y, stareSize));
-                stars.current.at(-1)?.setColor(...stareColor);
+                let star = new Stars(gap.x * x, gap.y * y, stareSize)
+                star.setColor(...stareColor);
+                star.speed *= speed;
+
+                stars.current.push(star);
             }
         }
         
@@ -95,10 +98,11 @@ export default function StarsBackground({gap={x: 10, y: 10}, mouseRadius=100,sta
     }
 
     function handleMouseMove(e) {
-        const {clientX: x, clientY: y} = e
+        const {clientX: x, clientY: y} = e;
+        const {top, left} = canvas.current.getBoundingClientRect();
 
         for(let s of stars.current) {
-            const dis = s.distanceFrom(x, y);
+            const dis = s.distanceFrom(x - left, y - top);
             if(dis < mouseRadius && Math.random() < 0.02) 
                 s.setOpacity(0);
         }
