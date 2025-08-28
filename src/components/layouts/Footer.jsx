@@ -20,10 +20,10 @@ export default function Footer() {
                             <a href="#" className="text-gray-400 hover:text-white transition-colors">
                                 <FiTwitter className="h-6 w-6" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                            <a href="https://www.linkedin.com/in/mustak24/" target="_blank" className="text-gray-400 hover:text-white transition-colors">
                                 <FiLinkedin className="h-6 w-6" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                            <a href="https://github.com/Mustak24/landing-page" target="_black" className="text-gray-400 hover:text-white transition-colors">
                                 <FiGithub className="h-6 w-6" />
                             </a>
                             <a href="#" className="text-gray-400 hover:text-white transition-colors">
