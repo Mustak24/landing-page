@@ -9,29 +9,7 @@ import SlidingTextOnHover from "../ui/Texts/SlidingTextOnHover";
 
 export default function HeroSection() {
     return (
-        <main id="hero" className="w-full px-5" >
-            <header className="h-12 flex items-center justify-between px-4" >
-                <div className="flex items-center gap-2" >
-                    <div className="relative flex items-center justify-center size-10 " >
-                        <img src="/app-icon.png" alt="404" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="font-semibold text-sm" >
-                        TaskFlow
-                    </div>
-                </div>
-                
-                <div className="text-xs flex gap-2 font-semibold" >
-                    <NormalButton 
-                        title={<SlidingTextOnHover text={'Sign in'}/>} 
-                        bg="white" text='black' 
-                    />
-                    <NormalButton 
-                        title={<SlidingTextOnHover text={'Sign up'}/>}
-                        bg="black" text='white' 
-                    />
-                </div>
-            </header>
-
+        <main id="hero" className="w-full px-5 pt-12" >
             <div className="relative w-full flex flex-col items-center pt-10 px-10 rounded-xl overflow-hidden shadow-[0_0_0_1px_rgb(0,0,0,0.2)]" >
                 <StarsBackground  className="absolute top-0 left-0 -z-1 w-full h-full" stareColor={[200,200,200]} />
                 <div className="size-20 rounded-md relative" >

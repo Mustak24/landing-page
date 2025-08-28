@@ -5,6 +5,7 @@ import { FaCode } from "react-icons/fa";
 import { MdOutlineContacts } from "react-icons/md";
 import debouncing from "../../utils/debouncing";
 import SlidingTextOnHover from "../ui/Texts/SlidingTextOnHover";
+import NormalButton from "../ui/Buttons/NoramalButton";
 
 export default function Navbar({routes}){
     routes = [
@@ -75,7 +76,30 @@ export default function Navbar({routes}){
    
 
     return <>
-        <nav ref={navbarBox} id="navbar" className="fixed z-[900] sm:top-4 max-sm:bottom-4 left-[50%] translate-x-[-50%]">
+        <header className="h-12 z-[900] flex items-center justify-between px-4 fixed top-0 left-0 w-screen" >
+            <div className="flex items-center gap-2" >
+                <div className="relative flex items-center justify-center size-10 " >
+                    <img src="/app-icon.png" alt="404" className="w-full h-full object-cover" />
+                </div>
+                <div className="font-semibold text-sm" >
+                    TaskFlow
+                </div>
+            </div>
+            
+            <div className="text-xs flex gap-2 font-semibold" >
+                <NormalButton
+                    title={<SlidingTextOnHover text={'Sign in'}/>} 
+                    bg="white" text='black' 
+                />
+                <NormalButton 
+                    title={<SlidingTextOnHover text={'Sign up'}/>}
+                    bg="black" text='white' 
+                />
+            </div>
+        </header>
+
+        <nav ref={navbarBox} id="navbar" className="fixed z-[900] md:top-4 max-md:bottom-4 left-[50%] translate-x-[-50%]">
+
             <div  className={'flex items-center justify-center gap-2 h-12 text-black bg-[rgb(0,0,0,0.05)] rounded-full backdrop-blur-[2px] shadow-[0_10px_10px_rgb(0,0,0,0.2)] '}>
                 {routes.map((item, index) => {
                     return <a 
