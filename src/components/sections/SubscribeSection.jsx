@@ -1,6 +1,7 @@
 import { FiArrowRight, FiCheckCircle, FiGift, FiMail, FiTrendingUp, FiZap } from "react-icons/fi";
 import StarsBackground from "../background-views/StarsBackground";
 import ShowWhenVisible from "../other/ShowWhenVisible";
+import { TypingText } from "../ui/Texts/TypingText";
 
 export default function SubscribeSection() {
 
@@ -20,10 +21,12 @@ export default function SubscribeSection() {
                     <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up animation-delay-200">
                         Join 50,000+ Productive Professionals
                     </h2>
-                    <p className="text-xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in-up animation-delay-400">
-                        Get exclusive productivity insights, early access to new features, and proven strategies
-                        that help top performers achieve more in less time.
-                    </p>
+                    <ShowWhenVisible>
+                        <TypingText className="text-xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in-up animation-delay-400 justify-center">
+                            Get exclusive productivity insights, early access to new features, and proven strategies
+                            that help top performers achieve more in less time.
+                        </TypingText>
+                    </ShowWhenVisible>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-6 mb-12 animate-fade-in-up animation-delay-600">

@@ -8,12 +8,12 @@ export default function BenefitsSection() {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 animate-fade-in-up">
-                    <h1 speed={50} className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                         Transform Your Productivity
                     </h1>
 
                     <ShowWhenVisible>
-                        <TypingText speed={10} className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        <TypingText className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed justify-center">
                             Join thousands of professionals who have revolutionized their work-life balance
                             and achieved more than they thought possible.
                         </TypingText>
@@ -29,7 +29,7 @@ export default function BenefitsSection() {
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">3x More Productive</h3>
 
-                            <TypingText speed={20} className="text-gray-600 leading-relaxed mb-6">
+                            <TypingText className="text-gray-600 leading-relaxed mb-6 justify-center">
                                 Our users report completing 3x more meaningful work after switching to TaskFlow's
                                 intelligent prioritization system.
                             </TypingText>
@@ -47,7 +47,7 @@ export default function BenefitsSection() {
                                 <FiClock className="h-10 w-10 text-white animate-bounce" style={{ animationDuration: '4s' }} />
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Save 2+ Hours Daily</h3>
-                            <TypingText speed={20} className="text-gray-600 leading-relaxed mb-6">
+                            <TypingText className="text-gray-600 leading-relaxed mb-6 justify-center">
                                 Eliminate time spent on task switching, searching for information, and
                                 manual coordination with automated workflows.
                             </TypingText>
@@ -65,7 +65,7 @@ export default function BenefitsSection() {
                                 <FiZap className="h-10 w-10 text-white animate-bounce" style={{ animationDuration: '4s' }} />
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Reduce Stress</h3>
-                            <TypingText speed={20} className="text-gray-600 leading-relaxed mb-6">
+                            <TypingText className="text-gray-600 leading-relaxed mb-6 justify-center">
                                 Clear visibility into your workload and automatic progress tracking
                                 eliminates the anxiety of forgotten tasks and missed deadlines.
                             </TypingText>

@@ -26,7 +26,7 @@ export default function HeroSection() {
                         text={'all in one place'}
                     />
                       
-                    <TypingText speed={25} className="text-xs mt-3 font-normal" >
+                    <TypingText className="text-xs mt-3 font-normal justify-center" >
                         Efficently manage your task and boost you productivity
                     </TypingText>
 

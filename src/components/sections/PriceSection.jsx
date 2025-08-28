@@ -60,7 +60,7 @@ export default function PriceSection() {
                         Simple, Transparent Pricing
                     </h2>
                     <ShowWhenVisible>
-                        <TypingText speed={10} className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        <TypingText className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed justify-center">
                             Choose the plan that's right for you. All plans include our core features
                             and 14-day free trial with no credit card required.
                         </TypingText>

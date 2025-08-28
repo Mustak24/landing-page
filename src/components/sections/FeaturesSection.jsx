@@ -55,7 +55,7 @@ export default function FeaturesSection() {
                     </h1>
 
                     <ShowWhenVisible>
-                        <TypingText speed={10} className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        <TypingText className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed justify-center">
                             TaskFlow combines powerful features with intuitive design to help you manage tasks,
                             collaborate with teams, and achieve your goals faster than ever.
                         </TypingText>
@@ -76,7 +76,7 @@ export default function FeaturesSection() {
                                 <h3 className="text-lg font-semibold text-gray-900 mb-3 fade-center-animation opacity-0" style={{ animationDelay: `${index * 20}ms` }}>
                                     {feature.title}
                                 </h3>
-                                <TypingText speed={10} className="text-gray-600 leading-relaxed">
+                                <TypingText className="text-gray-600 leading-relaxed">
                                     {feature.description}
                                 </TypingText>
                             </ShowWhenVisible>

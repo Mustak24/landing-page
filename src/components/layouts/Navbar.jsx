@@ -82,7 +82,7 @@ export default function Navbar({routes}){
                     <img src="/app-icon.png" alt="404" className="w-full h-full object-cover" />
                 </div>
                 <div className="font-semibold text-sm" >
-                    Task M  anager
+                    Task Manager
                 </div>
             </div>
             
