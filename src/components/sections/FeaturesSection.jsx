@@ -64,22 +64,23 @@ export default function FeaturesSection() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-stagger-children">
                     {features.map((feature, index) => (
-                        <ShowWhenVisible key={feature.title}>
-                            <div
-                                className="group p-6 rounded-xl bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gray-100 hover:-translate-y-2 fade-center-animation opacity-0"
-                                style={{ animationDelay: `${index * 20}ms` }}
-                            >
-                                <div className="text-blue-600 mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                        <div
+                            key={feature.title}
+                            className="group p-6 rounded-xl bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gray-100 hover:-translate-y-2"
+
+                        >
+                            <ShowWhenVisible key={feature.title}>
+                                <div className="text-blue-600 mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 fade-center-animation opacity-0" style={{ animationDelay: `${index * 20}ms` }}>
                                     {feature.icon}
                                 </div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                                <h3 className="text-lg font-semibold text-gray-900 mb-3 fade-center-animation opacity-0" style={{ animationDelay: `${index * 20}ms` }}>
                                     {feature.title}
                                 </h3>
-                                <p className="text-gray-600 leading-relaxed">
+                                <TypingText speed={10} className="text-gray-600 leading-relaxed">
                                     {feature.description}
-                                </p>
-                            </div>
-                        </ShowWhenVisible>
+                                </TypingText>
+                            </ShowWhenVisible>
+                        </div>
                     ))}
                 </div>
             </div>
