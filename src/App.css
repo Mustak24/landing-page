@@ -14,8 +14,11 @@ html, body {
 }
 
 
+.fade-center-animation {
+  animation: fade-in-center 450ms forwards;
+}
 
-@keyframes fade-animation {
+@keyframes fade-in-center {
   0%{scale: 0.4; opacity: 0; transform: translateY(50%);}
   100%{scale: 1; opacity: 1; transform: translateY(0);}
 }

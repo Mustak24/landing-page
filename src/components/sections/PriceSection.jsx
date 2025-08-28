@@ -1,5 +1,7 @@
 import { FiCheck, FiStar } from "react-icons/fi";
 import PriceCard from "../ui/Cards/PriceCard";
+import ShowWhenVisible from "../other/ShowWhenVisible";
+import { TypingText } from "../ui/Texts/TypingText";
 
 export default function PriceSection() {
       const plans = [
@@ -43,8 +45,7 @@ export default function PriceSection() {
         "Advanced security & SSO",
         "Custom workflows",
         "Dedicated success manager",
-        "On-premise deployment",
-        "SLA guarantee"
+        "On-premise deployment" 
       ],
       cta: "Contact Sales",
       popular: false
@@ -58,16 +59,20 @@ export default function PriceSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Simple, Transparent Pricing
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Choose the plan that's right for you. All plans include our core features 
-            and 14-day free trial with no credit card required.
-          </p>
+          <ShowWhenVisible>
+            <TypingText speed={10} className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Choose the plan that's right for you. All plans include our core features 
+                and 14-day free trial with no credit card required.
+            </TypingText>
+          </ShowWhenVisible>
         </div>
 
-        <div className="flex justify-center flex-wrap gap-8 w-full">
+        <div className="flex justify-center items-center flex-wrap gap-8 w-full">
             {
                 plans.map(plan => (
-                    <PriceCard {...plan} key={plan.name} />
+                    <ShowWhenVisible     >
+                        <PriceCard {...plan} key={plan.name} />
+                    </ShowWhenVisible>
                 ))
             }
           

@@ -6,6 +6,7 @@ import { TypingText } from "../ui/Texts/TypingText";
 import { useState } from "react";
 import { FiCheck } from "react-icons/fi";
 import SlidingTextOnHover from "../ui/Texts/SlidingTextOnHover";
+import ShowWhenVisible from "../other/ShowWhenVisible";
 
 export default function HeroSection() {
     return (
@@ -17,31 +18,40 @@ export default function HeroSection() {
                 </div>
 
                 <div className="text-center text-5xl font-semibold relative">
-                    <h1 style={{animation: 'fade-animation .5s'}} >
-                        Think, plan, and track
-                    </h1>
+                    <ShowWhenVisible>
+                        <h1 style={{animation: 'fade-animation .5s'}} >
+                            Think, plan, and track
+                        </h1>
+                    </ShowWhenVisible>
+                    
+                    <ShowWhenVisible>
+                        <div style={{animation: 'fade-animation .5s'}} >
+                            <TypingText speed={100} className="text-gray-500" >
+                                all in one place
+                            </TypingText>
+                        </div>
+                    </ShowWhenVisible>
 
-                    <div style={{animation: 'fade-animation .5s'}} >
-                        <TypingText speed={100} className="text-gray-500" >
-                            all in one place
-                        </TypingText>
-                    </div>
+                    <ShowWhenVisible>
+                        <div style={{animation: 'fade-animation .5s'}} >
+                            <TypingText speed={25}  className="text-xs mt-3 font-normal" >
+                                Efficently manage your task and boost you productivity
+                            </TypingText>
+                        </div>
+                    </ShowWhenVisible>
 
-                    <div style={{animation: 'fade-animation .5s'}} >
-                        <TypingText speed={25}  className="text-xs mt-3 font-normal" >
-                            Efficently manage your task and boost you productivity
-                        </TypingText>
-                    </div>
-
-                    <div 
-                        className="absolute top-0 right-0 translate-x-full bg-white rounded-md animate-bounce" 
-                        style={{animationDuration: '2s'}}
-                    >
-                        <FaRegClock />
-                    </div>
+                    <ShowWhenVisible>
+                        <div 
+                            className="absolute top-0 right-0 translate-x-full bg-white rounded-md animate-bounce" 
+                            style={{animationDuration: '2s'}}
+                        >
+                            <FaRegClock />
+                        </div>
+                    </ShowWhenVisible>
                 </div>
 
                 <div className="mt-5 flex gap-4 items-center" >  
+                    <ShowWhenVisible>
                         <div style={{animation: 'fade-animation .5s'}} >
                             <RoundedButton 
                                 title={<SlidingTextOnHover text={'Get free demo'}/>}
@@ -49,7 +59,9 @@ export default function HeroSection() {
                                 text="white"
                             />
                         </div> 
+                    </ShowWhenVisible>
 
+                    <ShowWhenVisible>
                         <div style={{animation: 'fade-animation .5s'}} >
                             <RoundedButton 
                                 title={<SlidingTextOnHover text={'Old User'}/>}
@@ -57,34 +69,36 @@ export default function HeroSection() {
                                 bg="white"
                             />
                         </div>
+                    </ShowWhenVisible>
                 </div>
 
+                <ShowWhenVisible className='w-full flex items-center justify-center' >
+                    <div className="relative w-full max-w-[800px] translate-y-10 group fade-center-animation" >
+                        <div className="absolute bg-orange-400 w-full h-full rotate-2 rounded-2xl group-hover:-rotate-2 duration-500 transition-all" ></div>
 
-                <div className="relative w-full max-w-[800px] translate-y-10 group" >
-                    <div className="absolute bg-orange-400 w-full h-full rotate-2 rounded-2xl group-hover:-rotate-2 duration-500 transition-all" ></div>
-
-                    <div className="bg-white p-5 rounded-lg w-full -rotate-2 flex flex-col gap-4 group-hover:rotate-2 duration-500 transition-all group-hover:scale-105" >
-                        <div className="bg-blue-500 text-white p-4 w-full rounded-lg">
-                            <h1>Today Focus</h1>
-                            <div className="flex items-center justify-between w-full" >
-                                <p>3 of 5 task completed</p>
-                                <div className="flex items-center bg-[rgb(255,255,255,0.4)] h-3 rounded-full w-40" >
-                                    <div className="w-[69%] bg-white rounded-full h-3" ></div>
+                        <div className="bg-white p-5 rounded-lg w-full -rotate-2 flex flex-col gap-4 group-hover:rotate-2 duration-500 transition-all group-hover:scale-105" >
+                            <div className="bg-blue-500 text-white p-4 w-full rounded-lg">
+                                <h1>Today Focus</h1>
+                                <div className="flex items-center justify-between w-full" >
+                                    <p>3 of 5 task completed</p>
+                                    <div className="flex items-center bg-[rgb(255,255,255,0.4)] h-3 rounded-full w-40" >
+                                        <div className="w-[69%] bg-white rounded-full h-3" ></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className="flex flex-col gap-2">
-                            <TaskRow text={'Review quarterl report'} isDone={true} />
-                            <TaskRow text={'Team standup meeting'} isDone={true} />
-                            <TaskRow text={'Prepare presentaiton slides'} isDone={true} />
-                            <TaskRow text={'Client follow-up calls'} />
-                            <TaskRow text={'Review Code'} />
-                        </div>
+                            <div className="flex flex-col gap-2">
+                                <TaskRow text={'Review quarterl report'} isDone={true} />
+                                <TaskRow text={'Team standup meeting'} isDone={true} />
+                                <TaskRow text={'Prepare presentaiton slides'} isDone={true} />
+                                <TaskRow text={'Client follow-up calls'} />
+                                <TaskRow text={'Review Code'} />
+                            </div>
 
-                        <div className="min-h-10" ></div>
+                            <div className="min-h-10" ></div>
+                        </div>
                     </div>
-                </div>
+                </ShowWhenVisible>
             </div>
         </main>
     )

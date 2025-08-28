@@ -1,5 +1,6 @@
 import { FiArrowRight, FiCheckCircle, FiGift, FiMail, FiTrendingUp, FiZap } from "react-icons/fi";
 import StarsBackground from "../background-views/StarsBackground";
+import ShowWhenVisible from "../other/ShowWhenVisible";
 
 export default function SubscribeSection() {
 
@@ -27,18 +28,19 @@ export default function SubscribeSection() {
 
                 <div className="grid md:grid-cols-3 gap-6 mb-12 animate-fade-in-up animation-delay-600">
                     {benefits.map((benefit, index) => (
-                        <div
-                            key={index}
-                            className="flex items-center gap-3 bg-gray-50 rounded-lg p-4 hover:bg-blue-50 transition-all duration-300 hover:scale-105 group"
-                            style={{ animationDelay: `${600 + (index * 100)}ms` }}
-                        >
-                            <div className="group-hover:scale-110 transition-all duration-300">
-                                {benefit.icon}
+                        <ShowWhenVisible key={index} >
+                            <div
+                                className="flex items-center gap-3 bg-gray-50 rounded-lg p-4 hover:bg-blue-50 transition-all duration-300 hover:scale-105 group fade-center-animation opacity-0"
+                                style={{ animationDelay: `${600 + (index * 100)}ms` }}
+                            >
+                                <div className="group-hover:scale-110 transition-all duration-300">
+                                    {benefit.icon}
+                                </div>
+                                <span className="text-gray-800 group-hover:text-blue-700 transition-colors duration-300">
+                                    {benefit.text}
+                                </span>
                             </div>
-                            <span className="text-gray-800 group-hover:text-blue-700 transition-colors duration-300">
-                                {benefit.text}
-                            </span>
-                        </div>
+                        </ShowWhenVisible>
                     ))}
                 </div>
 

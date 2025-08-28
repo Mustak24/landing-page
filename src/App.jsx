@@ -13,14 +13,14 @@ function App() {
 
   return (
     <div className='w-full h-full relative'>
-      <ParticleBackground
+      {/* <ParticleBackground
         className='fixed top-0 left-0 w-screen h-screen -z-1 blur-[1px]'
         maxSize={110}
         childs={[FiFileText, FiTrendingUp, FiBarChart2, FiCheckCircle, FiPrinter, FiMail, FiShield].map(Icon => (
               <Icon className='size-14 text-white' />
           ))}
 
-      />
+      /> */}
       <Navbar/>
       <HeroSection/>
       <FeaturesSection/>

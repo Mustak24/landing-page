@@ -3,11 +3,12 @@ import { FiCheck, FiStar } from "react-icons/fi";
 export default function PriceCard({name, popular, price, period, description, features, cta}) {
     return (
         <div 
-            className={`relative rounded-2xl p-8 transition-all duration-200 max-w-[360px] ${
+            className={`relative rounded-2xl p-8 transition-all duration-200 max-w-[360px] fade-center-animation opacity-0 ${
             popular 
                 ? 'bg-[rgb(100,130,250)] text-white border-2 border-blue-200 shadow-xl hover:shadow-2xl scale-105' 
                 : 'bg-white border border-gray-200 shadow-lg hover:shadow-xl hover:border-gray-300'
             }`}
+            style={{animationDelay: popular ? 0 : '100ms'}}
         >
             {popular && (
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 animate-bounce">
